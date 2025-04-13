@@ -66,3 +66,9 @@ This project is a deepfake video face swapping tool that allows users to swap fa
       use colab.
 [google Colab](https://colab.research.google.com)
         
+
+
+<video width="640" height="360" controls>
+  <source src="https://raw.githubusercontent.com/ramimK0bir/Face-swap-from-video/main/testing/testing%20sources/testing%20(1).mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
