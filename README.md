@@ -1,6 +1,6 @@
-#### DeepFake Face Swapper 
+# DeepFake Face Swapper 
 
-# This project is a deepfake video face swapping tool that allows users to swap faces in video clips using deep learning techniques. It leverages computer vision and neural networks to create realistic face-swapped videos.
+### This project is a deepfake video face swapping tool that allows users to swap faces in video clips using deep learning techniques. It leverages computer vision and neural networks to create realistic face-swapped videos.
 
 
 
@@ -34,7 +34,7 @@
         
 ## 🆘 Help
 
-# 🛠️ Command-Line Arguments
+### 🛠️ Command-Line Arguments
 
         When running main.py, you can pass the following arguments to control how the face swapper behaves:
 
@@ -58,6 +58,6 @@
 ![Face Swap Demo](https://github.com/ramimK0bir/Face-swap-from-video/blob/main/testing/test.gif?raw=true)
 
 
-
+### 
 
 
