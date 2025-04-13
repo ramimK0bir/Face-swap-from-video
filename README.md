@@ -7,45 +7,36 @@
 ## 🚀 Features
 
 Face detection and alignment
-
 Identity extraction and transfer
-
 Realistic face swapping in videos
-
 Easy-to-use interface or script-based workflow
-
 GPU acceleration (if available)
 
 ## 🧠 Technologies Used
 
-        Python 3.x
-        
-        OpenCV
-        
-        Dlib / face_recognition
-        
-        Deep learning (e.g., Autoencoders, GANs, or custom CNNs)
-        
-        FFmpeg (for video processing)
-        
-        PyTorch or TensorFlow (depending on your model)
+Python 3.x
+
+OpenCV
+
+Dlib / face_recognition
+
+Deep learning (e.g., Autoencoders, GANs, or custom CNNs)
+
+FFmpeg (for video processing)
+
+PyTorch or TensorFlow (depending on your model)
 
 
 ## 📦 Installation
-
-
-        
-        It's will only run in google colab.
-        
-        !git clone https://github.com/ramimK0bir/Face-swap-from-video.git
-        
-        %cd Face-swap-from-video
-        
-        !pip install -r requirements.txt
+ 
+#It's will only run in google colab.
+!git clone https://github.com/ramimK0bir/Face-swap-from-video.git
+%cd Face-swap-from-video
+!pip install -r requirements.txt
 
 ## 🧪 Usage
 
-        !python main.py --source path/to/source.jpg --target path/to/target.mp4  --output path/to/output.mp4
+!python main.py --source path/to/source.jpg --target path/to/target.mp4  --output path/to/output.mp4
         
 ## 🆘 Help
 
