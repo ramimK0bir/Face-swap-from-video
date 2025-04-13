@@ -45,7 +45,7 @@ This project is a deepfake video face swapping tool that allows users to swap fa
 
 🧪 Usage
 
-        python main.py --source path/to/source.jpg --target path/to/target.mp4 
+        python main.py --source path/to/source.jpg --target path/to/target.mp4  --output path/to/output.mp4
         
 🆘 Help
 
