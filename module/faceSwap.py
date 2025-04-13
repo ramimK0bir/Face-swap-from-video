@@ -158,11 +158,41 @@ class videoEditor :
         out.write(prev_frame)
         cap.release()
         out.release()
-    def addAudioToVideo(self,video_path, audio_source_path, output_path):
+
+
+
+
+
+
+
+    # def addAudioToVideo(self,video_path, audio_source_path, output_path):
+    #     try:
+    #         self.os.system(f'ffmpeg -i {video_path} -i {audio_source_path} -c:v copy -c:a aac -strict experimental {output_path}')
+    #     except Exception as e:
+    #         print(f"Unexpected error: {e}")
+
+
+
+
+    def addAudioToVideo(self, video_path, audio_source_path, output_path, video_codec="copy", audio_codec="aac", strict="experimental"):
         try:
-            self.os.system(f'ffmpeg -i {video_path} -i {audio_source_path} -c:v copy -c:a aac -strict experimental {output_path}')
+            command = [
+                'ffmpeg',
+                '-i', video_path,
+                '-i', audio_source_path,
+                '-c:v', video_codec,
+                '-c:a', audio_codec,
+                '-strict', strict,
+                output_path
+            ]
+            self.subprocess.run(command, check=True)
+            print(f"Successfully added audio from '{audio_source_path}' to video '{video_path}'. Output saved at '{output_path}'.")
+        except self.subprocess.CalledProcessError as e:
+            print(f"FFmpeg processing failed: {e}")
         except Exception as e:
             print(f"Unexpected error: {e}")
+
+
     def cleanup(self,path :str):
         if self.os.path.exists(path):
             for root, dirs, files in self.os.walk(path, topdown=False):
@@ -176,10 +206,10 @@ class videoEditor :
     def swapFaceFromVideo( self,faceImage,videoPath, outputPath ,videoFps):
         self.videoToImages(videoPath , 'images/',fps=videoFps)
         self.swapAll(faceImage, 'images/')
-        self.imagesToVideo('output.mp4','images/',fps=videoFps)
-        self.addAudioToVideo('output.mp4' , videoPath , videoPath)
-        self.os.remove("output.mp4")
+        self.imagesToVideo('internalOutput.mp4','images/',fps=videoFps)
+        self.addAudioToVideo('internalOutput.mp4' , videoPath , outputPath)
+        self.os.remove('internalOutput.mp4')
         self.cleanup("images/")
-        print(f"\n\n output video saved as {outputPath}")
+        print(f"\n\n output video saved as {self.os.path.abspath(outputPath)}")
 
 editor=videoEditor()
