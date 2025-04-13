@@ -1,10 +1,10 @@
-DeepFake Face Swapper 
+####DeepFake Face Swapper 
 
-This project is a deepfake video face swapping tool that allows users to swap faces in video clips using deep learning techniques. It leverages computer vision and neural networks to create realistic face-swapped videos.
+#This project is a deepfake video face swapping tool that allows users to swap faces in video clips using deep learning techniques. It leverages computer vision and neural networks to create realistic face-swapped videos.
 
 
 
-🚀 Features
+##🚀 Features
 
         Face detection and alignment
         
@@ -16,7 +16,7 @@ This project is a deepfake video face swapping tool that allows users to swap fa
         
         GPU acceleration (if available)
 
-🧠 Technologies Used
+##🧠 Technologies Used
 
         Python 3.x
         
@@ -31,7 +31,7 @@ This project is a deepfake video face swapping tool that allows users to swap fa
         PyTorch or TensorFlow (depending on your model)
 
 
-📦 Installation
+##📦 Installation
 
 
         
@@ -43,13 +43,13 @@ This project is a deepfake video face swapping tool that allows users to swap fa
         
         !pip install -r requirements.txt
 
-🧪 Usage
+##🧪 Usage
 
         !python main.py --source path/to/source.jpg --target path/to/target.mp4  --output path/to/output.mp4
         
-🆘 Help
+##🆘 Help
 
-🛠️ Command-Line Arguments
+#🛠️ Command-Line Arguments
 
         When running main.py, you can pass the following arguments to control how the face swapper behaves:
 
@@ -61,24 +61,15 @@ This project is a deepfake video face swapping tool that allows users to swap fa
 
 
 
-Testing 
-## Video Preview
-
-<video width="640" height="360" controls>
-  <source src="https://ramim.pythonanywhere.com/static/compressed.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
 
         
-👋 Instructions 
+##👋 Instructions 
 
       --fps must be smaller or equal to target video fps 
       use colab.
 [google Colab](https://colab.research.google.com)
         
-## Demo
-
+## Demo testing 
 ![Face Swap Demo](https://github.com/ramimK0bir/Face-swap-from-video/blob/main/testing/test.gif?raw=true)
 
 
