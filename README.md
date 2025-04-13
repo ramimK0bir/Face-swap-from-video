@@ -58,6 +58,10 @@
 ![Face Swap Demo](https://github.com/ramimK0bir/Face-swap-from-video/blob/main/testing/test.gif?raw=true)
 
 
-### 
+## Credit 
 
+### used technologies 
+[Insightface](https://github.com/deepinsight/insightface)
+[FFmpeg](https://github.com/FFmpeg/FFmpeg)
 
+### used content in testing
