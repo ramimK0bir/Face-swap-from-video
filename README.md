@@ -29,10 +29,10 @@ PyTorch or TensorFlow (depending on your model)
 
 ## 📦 Installation
  
-#It's will only run in google colab.
-!git clone https://github.com/ramimK0bir/Face-swap-from-video.git
-%cd Face-swap-from-video
-!pip install -r requirements.txt
+     #It's will only run in google colab.
+     !git clone https://github.com/ramimK0bir/Face-swap-from-video.git
+     %cd Face-swap-from-video
+     !pip install -r requirements.txt
 
 ## 🧪 Usage
 
