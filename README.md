@@ -23,7 +23,7 @@
 
 ## 📦 Installation
 
-  ### fro Google Colab.
+  ### For Google Colab.
   #### Ensure you're running this in a Google Colab environment for optimal performance.
     !git clone https://github.com/ramimK0bir/Face-swap-from-video.git
     %cd Face-swap-from-video
