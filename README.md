@@ -22,16 +22,30 @@
     PyTorch or TensorFlow (depending on your model)
 
 ## 📦 Installation
+
+  ### fro Google Colab.
  
-    #It's will only run in google colab.
+    !#Ensure you're running this in a Google Colab environment for optimal performance.
     !git clone https://github.com/ramimK0bir/Face-swap-from-video.git
     %cd Face-swap-from-video
     !pip install -r requirements.txt
-
+    
+  ### For Regular Linux System
+  
+    git clone https://github.com/ramimK0bir/Face-swap-from-video.git
+    cd Face-swap-from-video
+    pip install -r requirements.txt
+    
 ## 🧪 Usage
 
+  ### fro Google Colab.
+  
     !python main.py --source path/to/source.jpg --target path/to/target.mp4  --output path/to/output.mp4
-        
+    
+  ### For Regular Linux System
+  
+    python main.py --source path/to/source.jpg --target path/to/target.mp4  --output path/to/output.mp4
+    
 ## 🆘 Help
 
 ### 🛠️ Command-Line Arguments
