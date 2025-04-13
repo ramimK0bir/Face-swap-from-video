@@ -179,7 +179,6 @@ class videoEditor :
         self.imagesToVideo('output.mp4','images/',fps=videoFps)
         self.addAudioToVideo('output.mp4' , videoPath , videoPath)
         self.os.remove("output.mp4")
-        self.os.remove(videoPath)
         self.cleanup("images/")
         print(f"\n\n output video saved as {outputPath}")
 
