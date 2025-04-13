@@ -59,6 +59,5 @@ This project is a deepfake video face swapping tool that allows users to swap fa
         ---fps	int	❌ No	30	Sets the frames per second for the output video. Useful for matching original frame rate.
         
 👋 Instructions 
-
-[google Colab](https://colab.research.google.com)
+        use google colab [google Colab](https://colab.research.google.com)
         
