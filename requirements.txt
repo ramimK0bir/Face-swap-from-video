@@ -1,2 +1,4 @@
 insightface
 onnxruntime
+ffmpeg-python
+imageio-ffmpeg
