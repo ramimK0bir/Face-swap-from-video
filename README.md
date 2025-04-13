@@ -37,11 +37,11 @@ This project is a deepfake video face swapping tool that allows users to swap fa
         
         It's will only run in google colab.
         
-        git clone https://github.com/ramimK0bir/Face-swap-from-video.git
+        !git clone https://github.com/ramimK0bir/Face-swap-from-video.git
         
-        cd Face-swap-from-video
+        %cd Face-swap-from-video
         
-        pip install -r requirements.txt
+        !pip install -r requirements.txt
 
 🧪 Usage
 
