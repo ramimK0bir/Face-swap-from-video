@@ -39,11 +39,11 @@
 
   ### fro Google Colab.
   
-    !python main.py --source path/to/source.jpg --target path/to/target.mp4  --output path/to/output.mp4
+    !python main.py --source path/to/source.jpg --target path/to/target.mp4  --output path/to/output.mp4 --fps 30
     
   ### For Regular Linux System
   
-    python main.py --source path/to/source.jpg --target path/to/target.mp4  --output path/to/output.mp4
+    python main.py --source path/to/source.jpg --target path/to/target.mp4  --output path/to/output.mp4  --fps 30
     
 ## 🆘 Help
 
