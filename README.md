@@ -61,4 +61,5 @@ This project is a deepfake video face swapping tool that allows users to swap fa
 👋 Instructions 
 
         Try to use in [google Colab.](https://colab.research.google.com/)
-        
+        **`2025-03-02`** [inswapper-512-live](https://github.com/deepinsight/inswapper-512-live) launched.
+
