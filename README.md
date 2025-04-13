@@ -64,4 +64,5 @@
 [Insightface](https://github.com/deepinsight/insightface)
 [FFmpeg](https://github.com/FFmpeg/FFmpeg)
 
-### used content in testing
+### used content on testing
+Lady Gaga -> image , [testing source video](https://www.youtube.com/@albertatech)
