@@ -177,11 +177,10 @@ class videoEditor :
         self.videoToImages(videoPath , 'images/',fps=videoFps)
         self.swapAll(faceImage, 'images/')
         self.imagesToVideo('output.mp4','images/',fps=videoFps)
-        self.addAudioToVideo('output.mp4' , videoPath,'finalOutput.mp4')
+        self.addAudioToVideo('output.mp4' , videoPath , videoPath)
         self.os.remove("output.mp4")
         self.os.remove(videoPath)
         self.cleanup("images/")
-        self.os.rename("finalOutput.mp4",outputPath)
         print(f"\n\n output video saved as {outputPath}")
 
 editor=videoEditor()
