@@ -1,10 +1,10 @@
-####DeepFake Face Swapper 
+#### DeepFake Face Swapper 
 
-#This project is a deepfake video face swapping tool that allows users to swap faces in video clips using deep learning techniques. It leverages computer vision and neural networks to create realistic face-swapped videos.
+# This project is a deepfake video face swapping tool that allows users to swap faces in video clips using deep learning techniques. It leverages computer vision and neural networks to create realistic face-swapped videos.
 
 
 
-##🚀 Features
+## 🚀 Features
 
         Face detection and alignment
         
@@ -16,7 +16,7 @@
         
         GPU acceleration (if available)
 
-##🧠 Technologies Used
+## 🧠 Technologies Used
 
         Python 3.x
         
@@ -31,7 +31,7 @@
         PyTorch or TensorFlow (depending on your model)
 
 
-##📦 Installation
+## 📦 Installation
 
 
         
@@ -43,13 +43,13 @@
         
         !pip install -r requirements.txt
 
-##🧪 Usage
+## 🧪 Usage
 
         !python main.py --source path/to/source.jpg --target path/to/target.mp4  --output path/to/output.mp4
         
-##🆘 Help
+## 🆘 Help
 
-#🛠️ Command-Line Arguments
+# 🛠️ Command-Line Arguments
 
         When running main.py, you can pass the following arguments to control how the face swapper behaves:
 
@@ -63,7 +63,7 @@
 
 
         
-##👋 Instructions 
+## 👋 Instructions 
 
       --fps must be smaller or equal to target video fps 
       use colab.
