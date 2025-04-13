@@ -60,5 +60,5 @@ This project is a deepfake video face swapping tool that allows users to swap fa
         
 👋 Instructions 
 
-        Try to use in [google Colab](https://colab.research.google.com)
+[google Colab](https://colab.research.google.com)
         
