@@ -6,15 +6,15 @@
 
 ## 🚀 Features
 
-        Face detection and alignment
-        
-        Identity extraction and transfer
-        
-        Realistic face swapping in videos
-        
-        Easy-to-use interface or script-based workflow
-        
-        GPU acceleration (if available)
+Face detection and alignment
+
+Identity extraction and transfer
+
+Realistic face swapping in videos
+
+Easy-to-use interface or script-based workflow
+
+GPU acceleration (if available)
 
 ## 🧠 Technologies Used
 
