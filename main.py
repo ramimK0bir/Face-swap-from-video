@@ -38,6 +38,7 @@ def main():
         print("Face swapping completed successfully!")
     except Exception as e:
         print(f"Error: An issue occurred during face swapping - {str(e)}")
-
+        if "integer modulo b" in str(e):
+            print("try again after reducing --fps.if --fps not used then try --fps {source video fps}.")
 if __name__ == "__main__":
     main()
