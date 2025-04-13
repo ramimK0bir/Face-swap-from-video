@@ -2,7 +2,10 @@ DeepFake Face Swapper
 
 This project is a deepfake video face swapping tool that allows users to swap faces in video clips using deep learning techniques. It leverages computer vision and neural networks to create realistic face-swapped videos.
 
+
+
 🚀 Features
+
         Face detection and alignment
         
         Identity extraction and transfer
@@ -14,6 +17,7 @@ This project is a deepfake video face swapping tool that allows users to swap fa
         GPU acceleration (if available)
 
 🧠 Technologies Used
+
         Python 3.x
         
         OpenCV
@@ -30,7 +34,6 @@ This project is a deepfake video face swapping tool that allows users to swap fa
 📦 Installation
 
 
-
         
         It's will only made for run in google colab.
         
@@ -40,3 +43,6 @@ This project is a deepfake video face swapping tool that allows users to swap fa
         
         pip install -r requirements.txt
 
+🧪 Usage
+
+        python main.py --source path/to/source.mp4 --target path/to/target.mp4 
