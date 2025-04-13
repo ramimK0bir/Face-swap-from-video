@@ -59,6 +59,14 @@ This project is a deepfake video face swapping tool that allows users to swap fa
         --fps	int	❌ No	        30        Sets the frames per second for the output video. Useful to match original FPS.
         --output	str	❌ No	     output.mp4	  Path to save the output video.
 
+
+
+Testing 
+https://ramim.pythonanywhere.com/static/compressed.mp4
+
+
+
+
         
 👋 Instructions 
 
@@ -68,7 +76,3 @@ This project is a deepfake video face swapping tool that allows users to swap fa
         
 
 
-<video width="640" height="360" controls>
-  <source src="https://raw.githubusercontent.com/ramimK0bir/Face-swap-from-video/main/testing/testing%20sources/testing%20(1).mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
