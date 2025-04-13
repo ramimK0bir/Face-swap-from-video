@@ -62,9 +62,12 @@ This project is a deepfake video face swapping tool that allows users to swap fa
 
 
 Testing 
-https://ramim.pythonanywhere.com/static/compressed.mp4
+## Video Preview
 
-
+<video width="640" height="360" controls>
+  <source src="https://ramim.pythonanywhere.com/static/compressed.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
         
