@@ -173,11 +173,10 @@ class videoEditor :
             self.os.rmdir(path)
         else:
             print("Folder does not exist.")
-    def swapFaceFromVideo( self,faceImage,videoPath,fpsFactor=2):
-        self.videoToImages(videoPath , 'images/')
+    def swapFaceFromVideo( self,faceImage,videoPath,videoFps):
+        self.videoToImages(videoPath , 'images/',fps=videoFps)
         self.swapAll(faceImage, 'images/')
-        self.imagesToVideo('output.mp4','images/')
-        #self.increase_fps_with_interpolation('output.mp4', 'tempOutput.mp4', fpsFactor)
+        self.imagesToVideo('output.mp4','images/',fps=videoFps)
         self.addAudioToVideo('output.mp4' , videoPath,'finalOutput.mp4')
         self.os.remove("output.mp4")
         self.os.remove(videoPath)
