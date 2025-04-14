@@ -31,6 +31,7 @@
     
   ### For Regular Linux System
   
+    sudo apt install ffmpeg -y
     git clone https://github.com/ramimK0bir/Face-swap-from-video.git
     cd Face-swap-from-video
     pip install -r requirements.txt
