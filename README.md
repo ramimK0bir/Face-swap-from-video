@@ -14,7 +14,7 @@
 
 ## 🧠 Technologies Used
 
-    Python 3.x
+    Python 3.8 or above
     OpenCV
     Dlib / face_recognition
     Deep learning (e.g., Autoencoders, GANs, or custom CNNs)
