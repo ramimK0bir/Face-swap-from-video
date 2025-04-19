@@ -8,12 +8,7 @@ class videoEditor :
         import subprocess
         import cv2
         import numpy as np
-        try :
-            import insightface
-        except  :
-            os.system("pip install insightface")
-            os.system("pip install onnxruntime")
-            import insightface
+        import insightface
         from insightface.app import FaceAnalysis
         from concurrent.futures import ThreadPoolExecutor
         self.os=os
