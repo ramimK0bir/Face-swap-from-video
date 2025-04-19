@@ -28,14 +28,22 @@
     !git clone https://github.com/ramimK0bir/Face-swap-from-video.git
     %cd Face-swap-from-video
     !pip install -r requirements.txt
-    
+
+### Additional settings for cuda execution .
+#### Make sure you're running it with cuda GPU.
+    !pip uninstall onnxruntime -y
+    !pip install onnxruntime-gpu
   ### For Regular Linux System
   
     sudo apt install ffmpeg -y
     git clone https://github.com/ramimK0bir/Face-swap-from-video.git
     cd Face-swap-from-video
     pip install -r requirements.txt
-    
+### Additional settings for cuda execution .
+#### Make sure you're running it with cuda GPU.
+    pip uninstall onnxruntime -y
+    pip install onnxruntime-gpu
+
 ## 🧪 Usage
 
   ### For [Google Colab](https://colab.research.google.com).
