@@ -42,7 +42,6 @@ class videoEditor :
         if face1 :
             face1=face1[0]
         else :
-            print("no face detected in image.")
             return
         swapped_img = self.swapper.get(img1, face1, face)
         self.cv2.imwrite(outputImage, swapped_img)
