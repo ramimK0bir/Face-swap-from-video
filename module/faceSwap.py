@@ -163,29 +163,29 @@ class videoEditor :
 
 
 
-def addAudioToVideo(self, video_path, audio_source_path, output_path,
-                    crf=23, preset="medium", audio_codec="aac", strict="experimental"):
-    try:
-        command = [
-            'ffmpeg',
-            '-y',  # Overwrite output
-            '-i', video_path,
-            '-i', audio_source_path,
-            '-c:v', 'libx264',         # Compress video
-            '-crf', str(crf),          # Quality setting
-            '-preset', preset,         # Compression speed
-            '-c:a', audio_codec,       # Audio codec
-            '-strict', strict,         # Compatibility flag
-            output_path
-        ]
-
-        self.subprocess.run(command, check=True)
-        print(f"\nSuccessfully added audio and compressed video. Output saved at '{output_path}'.")
-
-    except self.subprocess.CalledProcessError as e:
-        raise ValueError(f"FFmpeg processing failed: {e}. \nVideo saved as {video_path} without any audio.")
-    except Exception as e:
-        raise ValueError(f"Unexpected error: {e}")
+    def addAudioToVideo(self, video_path, audio_source_path, output_path,
+                        crf=23, preset="medium", audio_codec="aac", strict="experimental"):
+        try:
+            command = [
+                'ffmpeg',
+                '-y',  # Overwrite output
+                '-i', video_path,
+                '-i', audio_source_path,
+                '-c:v', 'libx264',         # Compress video
+                '-crf', str(crf),          # Quality setting
+                '-preset', preset,         # Compression speed
+                '-c:a', audio_codec,       # Audio codec
+                '-strict', strict,         # Compatibility flag
+                output_path
+            ]
+    
+            self.subprocess.run(command, check=True)
+            print(f"\nSuccessfully added audio and compressed video. Output saved at '{output_path}'.")
+    
+        except self.subprocess.CalledProcessError as e:
+            raise ValueError(f"FFmpeg processing failed: {e}. \nVideo saved as {video_path} without any audio.")
+        except Exception as e:
+            raise ValueError(f"Unexpected error: {e}")
 
 
                         
