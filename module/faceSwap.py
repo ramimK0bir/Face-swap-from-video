@@ -165,11 +165,6 @@ class videoEditor :
 
 
 
-    # def addAudioToVideo(self,video_path, audio_source_path, output_path):
-    #     try:
-    #         self.os.system(f'ffmpeg -i {video_path} -i {audio_source_path} -c:v copy -c:a aac -strict experimental {output_path}')
-    #     except Exception as e:
-    #         print(f"Unexpected error: {e}")
 
 
 
@@ -178,6 +173,7 @@ class videoEditor :
         try:
             command = [
                 'ffmpeg',
+                '-y',  # force overwrite
                 '-i', video_path,
                 '-i', audio_source_path,
                 '-c:v', video_codec,
@@ -185,13 +181,13 @@ class videoEditor :
                 '-strict', strict,
                 output_path
             ]
-            self.subprocess.run(command, check=True)
-            print(f"Successfully added audio from '{audio_source_path}' to video '{video_path}'. Output saved at '{output_path}'.")
-        except self.subprocess.CalledProcessError as e:
-            print(f"FFmpeg processing failed: {e}")
-        except Exception as e:
-            print(f"Unexpected error: {e}")
 
+            self.subprocess.run(command, check=True)
+            print(f"\nSuccessfully added audio from '{audio_source_path}' to video '{video_path}'. Output saved at '{output_path}'.")
+        except self.subprocess.CalledProcessError as e:
+            raise ValueError(f"FFmpeg processing failed: {e}. \nvideo saved as {video_path} withut any audio.")
+        except Exception as e:
+            raise ValueError(f"Unexpected error: {e}")
 
     def cleanup(self,path :str):
         if self.os.path.exists(path):
@@ -210,6 +206,6 @@ class videoEditor :
         self.addAudioToVideo('internalOutput.mp4' , videoPath , outputPath)
         self.os.remove('internalOutput.mp4')
         self.cleanup("images/")
-        print(f"\n\n output video saved as {self.os.path.abspath(outputPath)}")
+        print(f"\n\noutput video saved as {self.os.path.abspath(outputPath)}")
 
 editor=videoEditor()
