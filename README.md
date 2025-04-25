@@ -91,5 +91,5 @@ Lady Gaga -> image , [testing source video](https://www.youtube.com/@albertatech
 
 
 ## 📬 Contact ME
-[GITHUB](https://github.com/ramimK0bir)
+[Github](https://github.com/ramimK0bir)
 [Facebook](https://facebook.com/userAnonymousLoggedIn)
