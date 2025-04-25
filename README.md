@@ -93,3 +93,22 @@ Lady Gaga -> image , [testing source video](https://www.youtube.com/@albertatech
 ## 📬 Contact ME
 [Github](https://github.com/ramimK0bir)
 [Facebook](https://facebook.com/userAnonymousLoggedIn)
+
+
+# Face Swap from Video
+
+This project provides a tool for swapping faces within video content using machine learning and AI technologies. It is intended for responsible use in creative, research, and educational settings.
+
+## Ethical Use Guidelines
+
+1. **Consent**: Always ensure that individuals whose faces are being swapped have given explicit, informed consent for their likeness to be used.
+   
+2. **Transparency**: Clearly inform others that face-swapping technology has been used in your video or content to avoid confusion and the spread of misleading content.
+   
+3. **Non-Exploitation**: Do not use this tool to create content that could harm, harass, or exploit others, including impersonating individuals or spreading false information.
+
+4. **Legal Compliance**: Follow the laws regarding privacy, copyright, and data protection in your jurisdiction. Face-swapping without consent may be illegal depending on local regulations.
+
+## Disclaimer
+
+The developer of this project **does not** take responsibility for any misuse of the tool, including, but not limited to, the creation of misleading, harmful, or illegal content. Users of this project are solely responsible for their use of the software and must comply with all applicable laws, ethical standards, and regulations.
