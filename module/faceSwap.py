@@ -68,28 +68,71 @@ class videoEditor :
             for future in futures:
                 future.result()
 
-    def videoToImages(self,videoPath, outputFolder, fps=30):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    def videoToImages(self, videoPath, outputFolder, target_fps=30):
         self.os.makedirs(outputFolder, exist_ok=True)
         cap = self.cv2.VideoCapture(videoPath)
+        
         if not cap.isOpened():
             return {'status': 'error', 'message': 'Failed to open video file.'}
+        
         video_fps = cap.get(self.cv2.CAP_PROP_FPS)
-        frame_interval = int(video_fps / fps)
+        if video_fps <= 0:
+            cap.release()
+            return {'status': 'error', 'message': 'Could not determine video FPS.'}
+        
+        frame_interval = video_fps / target_fps
         frame_count = 0
         saved_count = 0
+        next_capture_frame = 0.0
+    
         while True:
             ret, frame = cap.read()
             if not ret:
                 break
-            if frame_count % frame_interval == 0:
+    
+            if frame_count >= next_capture_frame:
                 output_path = self.os.path.join(outputFolder, f'{saved_count:09}.jpg')
                 self.cv2.imwrite(output_path, frame)
                 saved_count += 1
+                next_capture_frame += frame_interval
+    
             frame_count += 1
-
+    
         cap.release()
-        self.numberOfImages=saved_count
+        self.numberOfImages = saved_count
         return {'status': 'success', 'saved_images': saved_count, 'output_folder': outputFolder}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
 
     def imagesToVideo(self, outputVideoPath,imagesFolder, fps=30):
         image_files = sorted(
@@ -155,4 +198,5 @@ class videoEditor :
         print(f"\n\noutput video saved as {self.os.path.abspath(outputPath)}")
 
 editor=videoEditor()
+
 
