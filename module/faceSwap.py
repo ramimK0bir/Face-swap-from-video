@@ -111,81 +111,6 @@ class videoEditor :
         out.release()
         return {'status': 'success', 'output_video_path': outputVideoPath, 'total_frames': len(image_files)}
 
-    def interpolate_frame(self,frame1, frame2, alpha):
-        gray1 = self.cv2.cvtColor(frame1, self.cv2.COLOR_BGR2GRAY)
-        gray2 = self.cv2.cvtColor(frame2, self.cv2.COLOR_BGR2GRAY)
-        flow = self.cv2.calcOpticalFlowFarneback(gray1, gray2, None, 0.5, 3, 15, 3, 5, 1.2, 0)
-        h, w = gray1.shape[:2]
-        flow_map_x, flow_map_y = self.np.meshgrid(self.np.arange(w), self.np.arange(h))
-        flow_map = self.np.stack((flow_map_x, flow_map_y), axis=-1).astype(self.np.float32)
-        intermediate_flow1 = flow_map - alpha * flow
-        intermediate_flow2 = flow_map + (1 - alpha) * flow
-        warp1 = self.cv2.remap(frame1, intermediate_flow1[..., 0], intermediate_flow1[..., 1], interpolation=self.cv2.INTER_LINEAR)
-        warp2 = self.cv2.remap(frame2, intermediate_flow2[..., 0], intermediate_flow2[..., 1], interpolation=self.cv2.INTER_LINEAR)
-        
-        interpolated_frame = self.cv2.addWeighted(warp1, 1 - alpha, warp2, alpha, 0)
-        return interpolated_frame
-
-    def increase_fps_with_interpolation(self,input_video_path, output_video_path, scale_factor):
-        cap = self.cv2.VideoCapture(input_video_path)
-        fps = int(cap.get(self.cv2.CAP_PROP_FPS))
-        width = int(cap.get(self.cv2.CAP_PROP_FRAME_WIDTH))
-        height = int(cap.get(self.cv2.CAP_PROP_FRAME_HEIGHT))
-        fourcc = self.cv2.VideoWriter_fourcc(*'mp4v')
-        new_fps = int(fps * scale_factor)
-
-        out = self.cv2.VideoWriter(output_video_path, fourcc, new_fps, (width, height))
-        ret, prev_frame = cap.read()
-        if not ret:
-            print("Error reading the video.")
-            return
-        while True:
-            ret, next_frame = cap.read()
-            if not ret:
-                break
-            out.write(prev_frame)
-            for i in range(1, int(scale_factor)):
-                alpha = i / scale_factor
-                interpolated_frame = self.interpolate_frame(prev_frame, next_frame, alpha)
-                out.write(interpolated_frame.astype(self.np.uint8))
-            prev_frame = next_frame
-        out.write(prev_frame)
-        cap.release()
-        out.release()
-
-
-
-
-
-
-
-
-
-
-
-    # def addAudioToVideo(self, video_path, audio_source_path, output_path,
-    #                     crf=23, preset="medium", audio_codec="aac", strict="experimental"):
-    #     try:
-    #         command = [
-    #             'ffmpeg',
-    #             '-y',  # Overwrite output
-    #             '-i', video_path,
-    #             '-i', audio_source_path,
-    #             '-c:v', 'libx264',         # Compress video
-    #             '-crf', str(crf),          # Quality setting
-    #             '-preset', preset,         # Compression speed
-    #             '-c:a', audio_codec,       # Audio codec
-    #             '-strict', strict,         # Compatibility flag
-    #             output_path
-    #         ]
-    
-    #         self.subprocess.run(command, check=True)
-    #         print(f"\nSuccessfully added audio and compressed video. Output saved at '{output_path}'.")
-    
-    #     except self.subprocess.CalledProcessError as e:
-    #         raise ValueError(f"FFmpeg processing failed: {e}. \nVideo saved as {video_path} without any audio.")
-    #     except Exception as e:
-    #         raise ValueError(f"Unexpected error: {e}")
     def addAudioToVideo(self, video_path, audio_source_path, output_path, video_codec="copy", audio_codec="aac", strict="experimental"):
         try:
             command = [
@@ -230,3 +155,4 @@ class videoEditor :
         print(f"\n\noutput video saved as {self.os.path.abspath(outputPath)}")
 
 editor=videoEditor()
+
