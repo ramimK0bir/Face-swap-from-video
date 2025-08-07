@@ -83,7 +83,7 @@ class videoEditor :
 
 
     
-    def videoToImages(self, videoPath, outputFolder, target_fps=30):
+    def videoToImages(self, videoPath, outputFolder, fps=30):
         self.os.makedirs(outputFolder, exist_ok=True)
         cap = self.cv2.VideoCapture(videoPath)
         
@@ -95,7 +95,7 @@ class videoEditor :
             cap.release()
             return {'status': 'error', 'message': 'Could not determine video FPS.'}
         
-        frame_interval = video_fps / target_fps
+        frame_interval = video_fps / fps
         frame_count = 0
         saved_count = 0
         next_capture_frame = 0.0
@@ -198,5 +198,6 @@ class videoEditor :
         print(f"\n\noutput video saved as {self.os.path.abspath(outputPath)}")
 
 editor=videoEditor()
+
 
 
