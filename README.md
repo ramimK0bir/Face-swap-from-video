@@ -46,7 +46,7 @@
 
 ## 🧪 Usage
 
-  ### For [Google Colab](https://colab.research.google.com).
+  ### For [google Colab](https://colab.research.google.com) .
   
     !python main.py --source path/to/source.jpg --target path/to/target.mp4  --output path/to/output.mp4 --fps 30
     
