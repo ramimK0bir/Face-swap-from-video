@@ -170,7 +170,7 @@ class videoEditor :
             self.subprocess.run(command, check=True)
             print(f"\nSuccessfully added audio from '{audio_source_path}' to video '{video_path}'. Output saved at '{output_path}'.")
         except self.subprocess.CalledProcessError as e:
-            raise ValueError(f"FFmpeg processing failed: {e}. \nvideo saved as {video_path} withut any audio.")
+            raise ValueError(f"FFmpeg processing failed: {e}. \nvideo saved as {video_path} without any audio.")
         except Exception as e:
             raise ValueError(f"Unexpected error: {e}")
 
@@ -198,6 +198,7 @@ class videoEditor :
         print(f"\n\noutput video saved as {self.os.path.abspath(outputPath)}")
 
 editor=videoEditor()
+
 
 
 
