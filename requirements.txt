@@ -1,3 +1,4 @@
+# Compatible Python versions: >=3.8, <=3.11
 insightface
 onnxruntime
 ffmpeg-python
