@@ -2,6 +2,14 @@
 
 ### This project is a deepfake video face swapping tool that allows users to swap faces in video clips using deep learning techniques. It leverages computer vision and neural networks to create realistic swapped faces in videos.
 
+Got it—keeping it **super simple and clear**:
+
+
+# ⚠️ Python Version ⚠️
+
+## **Use Python 3.8 to 3.11 ONLY**
+
+
 ## 🚀 Features
 
     Face detection and alignment
