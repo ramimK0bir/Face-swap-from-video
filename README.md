@@ -54,11 +54,11 @@ Got it—keeping it **super simple and clear**:
 
   ### For [google Colab](https://colab.research.google.com) .
   
-    !python main.py --source path/to/source.jpg --target path/to/target.mp4  --output path/to/output.mp4 --fps 30
+    !python main.py --source testing/new.jpg --target testing/testing.mp4  --output output.mp4 --fps 30
     
   ### For Regular Linux System
   
-    python main.py --source path/to/source.jpg --target path/to/target.mp4  --output path/to/output.mp4  --fps 30
+    python main.py --source testing/new.jpg --target testing/testing.mp4  --output output.mp4 --fps 30
     
 ## 🆘 Help
 
