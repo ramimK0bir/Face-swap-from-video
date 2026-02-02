@@ -1,8 +1,14 @@
 from module import faceSwap
 import argparse
 import os
+import shlex
 
 def main():
+    # Read arguments from environment variable
+    import os as os_env
+    env_options = os_env.getenv("OPTIONS", "")
+    args_list = shlex.split(env_options)  # safely split like shell arguments
+
     parser = argparse.ArgumentParser(description="DeepFake Face Swapper")
     
     parser.add_argument('--source', type=str, required=True, help='Path to the source image (face to swap in)')
@@ -10,7 +16,12 @@ def main():
     parser.add_argument('--fps', type=int, default=30, help='Frames per second for output video')
     parser.add_argument('--output', type=str, default='output.mp4', help='Path to save the output video (default: output.mp4)')
     
-    args = parser.parse_args()
+    args = parser.parse_args(args_list)  # parse from env variable
+
+    # Prepend /input_output/ to source, target, output paths
+    args.source = os.path.join("/input_output", args.source)
+    args.target = os.path.join("/input_output", args.target)
+    args.output = os.path.join("/input_output", args.output)
 
     # Validate file paths
     if not os.path.isfile(args.source):
@@ -39,6 +50,7 @@ def main():
     except Exception as e:
         print(f"Error: An issue occurred during face swapping - {str(e)}")
         if "integer modulo b" in str(e):
-            print("try again after reducing --fps.if --fps not used then try --fps {source video fps}.")
+            print("Try again after reducing --fps. If --fps not used, try --fps equal to source video fps.")
+
 if __name__ == "__main__":
     main()
