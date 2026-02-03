@@ -123,13 +123,15 @@ mv input_video.mp4 ./input_output/
 
 3. **Run Docker container with a name:**
    This will automatically read inputs from `input_output` and store the output there.
-
+   change --fps and replace <source>, <target>, <output> filename in OPTIONS if needed.
 ```bash
 docker run --name face_swap_job \
   -v ./input_output:/input_output \
-  -e OPTIONS="--source source_face.jpg --target input_video.mp4 --fps 5 --output swapped_video.mp4" \
+  -e OPTIONS="--source source_face.jpg --target input_video.mp4 --fps 30 --output swapped_video.mp4" \
   useranonymous/face_swap_from_video:0.0.1
 ```
+
+no need mention input_output in path.
 
 4. **Monitor progress (optional):**
 
