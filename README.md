@@ -129,13 +129,7 @@ docker rm face_swap_job
 * Ensure your source image and target video are in the `input_output` folder before running.
 * Use the **same option names** as in the main branch CLI (`--source`, `--target`, `--output`, `--fps`).
 
-```
-```
-
-
-```
-
-
+---
         
 ## Demo testing 
 ![Face Swap Demo](https://github.com/ramimK0bir/Face-swap-from-video/blob/main/testing/test.gif?raw=true)
@@ -169,3 +163,4 @@ This project provides a tool for swapping faces within video content using machi
 ## Disclaimer
 
 The developer of this project **does not** take responsibility for any misuse of the tool, including, but not limited to, the creation of misleading, harmful, or illegal content. Users of this project are solely responsible for compliance with all applicable laws and regulations.
+```
