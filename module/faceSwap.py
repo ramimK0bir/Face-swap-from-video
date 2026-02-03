@@ -60,7 +60,7 @@ class videoEditor :
             [f for f in self.os.listdir(sourcePath) if f.endswith(('.jpg', '.png'))]
         )
         sourcePath = sourcePath.rstrip('/')  
-        with self.ThreadPoolExecutor(max_workers=15) as executor:
+        with self.ThreadPoolExecutor(max_workers=3) as executor:
             futures = [
                 executor.submit(self.processImage, file, sourcePath, face2)
                 for file in image_files
@@ -198,6 +198,7 @@ class videoEditor :
         print(f"\n\noutput video saved as {self.os.path.abspath(outputPath)}")
 
 editor=videoEditor()
+
 
 
 
