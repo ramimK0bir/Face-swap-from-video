@@ -72,64 +72,12 @@ Got it—keeping it **super simple and clear**:
         --fps	    int	❌ No	        30        Sets the frames per second for the output video. Useful to match original FPS.
         --output	str	❌ No	     output.mp4	  Path to save the output video.
 
-
-
         
 ## 👋 Instructions 
 
       --fps must be smaller or equal to target video fps 
       use colab.
 [google Colab](https://colab.research.google.com)
-
-```
-
-````markdown
-## Docker Usage
-
-1. **Prepare input/output folder:**
-```bash
-mkdir -p ./input_output
-````
-
-2. **Move your source files into `input_output`:**
-   Place the source image and target video inside the folder before running the container. For example:
-
-```bash
-mv new.jpg ./input_output/
-mv testing.mp4 ./input_output/
-```
-
-3. **Run Docker container with a name:**
-   This uses the *exact same* options as the main branch CLI (`main.py --source ... --target ... --output ... --fps ...`). ([GitHub][1])
-
-```bash
-docker run --name face_swap_job \
-  -v ./input_output:/input_output \
-  -e OPTIONS="--source new.jpg --target testing.mp4 --output result.mp4 --fps 30" \
-  useranonymous/face_swap_from_video:0.0.1
-```
-
-4. **Monitor progress (optional — shows CMD output):**
-
-```bash
-docker logs -f face_swap_job
-```
-
-* Running in foreground like above shows live progress (downloads, processing etc.).
-
-5. **Remove container after completion:**
-
-```bash
-docker rm face_swap_job
-```
-
-**Notes:**
-
-* All outputs are automatically stored in `./input_output`.
-* Ensure your source image and target video are in the `input_output` folder before running.
-* Use the **same option names** as in the main branch CLI (`--source`, `--target`, `--output`, `--fps`).
-
----
         
 ## Demo testing 
 ![Face Swap Demo](https://github.com/ramimK0bir/Face-swap-from-video/blob/main/testing/test.gif?raw=true)
@@ -163,4 +111,3 @@ This project provides a tool for swapping faces within video content using machi
 ## Disclaimer
 
 The developer of this project **does not** take responsibility for any misuse of the tool, including, but not limited to, the creation of misleading, harmful, or illegal content. Users of this project are solely responsible for compliance with all applicable laws and regulations.
-```
