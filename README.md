@@ -80,32 +80,6 @@ Got it—keeping it **super simple and clear**:
 [google Colab](https://colab.research.google.com)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Usage For Docker 
 
 1. **Prepare input/output folder:**
@@ -113,12 +87,12 @@ Got it—keeping it **super simple and clear**:
 mkdir -p ./input_output
 ````
 
-2. **Move your source files into `input_output`:**
+2. **Copy your source files into `input_output`:**
    Place the source image and target video inside the folder before running the container. For example, if your files are `source_face.jpg` and `input_video.mp4`, move them like this:
 
 ```bash
-mv source_face.jpg ./input_output/
-mv input_video.mp4 ./input_output/
+cp source_face.jpg ./input_output/
+cp input_video.mp4 ./input_output/
 ```
 
 3. **Run Docker container with a name:**
