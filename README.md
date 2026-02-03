@@ -130,7 +130,6 @@ docker rm face_swap_job
 * Use the **same option names** as in the main branch CLI (`--source`, `--target`, `--output`, `--fps`).
 
 ```
-```
 
 [1]: https://github.com/ramimK0bir/Face-swap-from-video/blob/main/README.md "Face-swap-from-video/README.md at main · ramimK0bir/Face-swap-from-video · GitHub"
 
