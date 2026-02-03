@@ -154,29 +154,8 @@ docker rm face_swap_job
 * `--fps` controls the frame rate of the output video.
 * You can rename outputs as needed via `--output`.
 
-```
- 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 ## Demo testing 
 ![Face Swap Demo](https://github.com/ramimK0bir/Face-swap-from-video/blob/main/testing/test.gif?raw=true)
 
