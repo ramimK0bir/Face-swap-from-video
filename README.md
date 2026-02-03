@@ -102,7 +102,7 @@ cp input_video.mp4 ./input_output/
 docker run --name face_swap_job \
   -v ./input_output:/input_output \
   -e OPTIONS="--source source_face.jpg --target input_video.mp4 --fps 30 --output swapped_video.mp4" \
-  useranonymous/face_swap_from_video:0.0.1
+  useranonymous/face_swap_from_video:0.0.2
 ```
 
 no need mention input_output in path.
