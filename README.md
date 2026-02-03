@@ -83,10 +83,6 @@ Got it—keeping it **super simple and clear**:
 
 
 
-
-
-Here’s the **Docker usage section updated to exactly match the `main.py` CLI options from the main branch** (same names/order as the README shows): ([GitHub][1])
-
 ````markdown
 ## Docker Usage
 
