@@ -96,23 +96,72 @@ Got it—keeping it **super simple and clear**:
 
 
 
+
+
+
+
+
+
+
+
+
+
 ## Docker Usage
 
-1. **Create input/output folder:**
-bash mkdir -p ./input_output
-`
+1. **Prepare input/output folder:**
+```bash
+mkdir -p ./input_output
+````
 
-2. **Run Docker container with a name:**
-bash docker run -d \ --name face_swap_job \ -v ./input_output:/input_output \ -e OPTIONS="--source new.jpg --target testing.mp4 --fps 5 --output result.mp4" \ useranonymous/face_swap_from_video:0.0.0
-3. **Monitor logs (optional):**
-bash docker logs -f face_swap_job
-4. **Remove container after job is done:**
-bash docker rm face_swap_job
+2. **Move your source files into `input_output`:**
+   Place the source image and target video inside the folder before running the container. For example, if your files are `source_face.jpg` and `input_video.mp4`, move them like this:
+
+```bash
+mv source_face.jpg ./input_output/
+mv input_video.mp4 ./input_output/
+```
+
+3. **Run Docker container with a name:**
+   This will automatically read inputs from `input_output` and store the output there.
+
+```bash
+docker run --name face_swap_job \
+  -v ./input_output:/input_output \
+  -e OPTIONS="--source source_face.jpg --target input_video.mp4 --fps 5 --output swapped_video.mp4" \
+  useranonymous/face_swap_from_video:0.0.0
+```
+
+4. **Monitor progress (optional):**
+
+```bash
+docker logs -f face_swap_job
+```
+
+* Running in foreground like above shows CMD progress, downloads, and frame processing in real-time.
+
+5. **Remove container after completion:**
+
+```bash
+docker rm face_swap_job
+```
+
 **Notes:**
 
-* Place your source image (`new.jpg`) and target video (`testing.mp4`) in `./input_output`.
-* Output video `result.mp4` will appear in the same `./input_output` folder.
-* `-d` runs container in detached mode; you can omit it to run in foreground.
+* All results are automatically stored in `./input_output`.
+* Make sure your source image and target video are in the `input_output` folder before starting.
+* `--fps` controls the frame rate of the output video.
+* You can rename outputs as needed via `--output`.
+
+```
+ 
+
+
+
+
+
+
+
+
 
 
 
