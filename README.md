@@ -78,7 +78,54 @@ Got it—keeping it **super simple and clear**:
       --fps must be smaller or equal to target video fps 
       use colab.
 [google Colab](https://colab.research.google.com)
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Docker Usage
+
+1. **Create input/output folder:**
+bash mkdir -p ./input_output
+`
+
+2. **Run Docker container with a name:**
+bash docker run -d \ --name face_swap_job \ -v ./input_output:/input_output \ -e OPTIONS="--source new.jpg --target testing.mp4 --fps 5 --output result.mp4" \ useranonymous/face_swap_from_video:0.0.0
+3. **Monitor logs (optional):**
+bash docker logs -f face_swap_job
+4. **Remove container after job is done:**
+bash docker rm face_swap_job
+**Notes:**
+
+* Place your source image (`new.jpg`) and target video (`testing.mp4`) in `./input_output`.
+* Output video `result.mp4` will appear in the same `./input_output` folder.
+* `-d` runs container in detached mode; you can omit it to run in foreground.
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Demo testing 
 ![Face Swap Demo](https://github.com/ramimK0bir/Face-swap-from-video/blob/main/testing/test.gif?raw=true)
 
