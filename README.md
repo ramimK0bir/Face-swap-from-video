@@ -130,15 +130,10 @@ docker rm face_swap_job
 * Use the **same option names** as in the main branch CLI (`--source`, `--target`, `--output`, `--fps`).
 
 ```
-
+```
 
 
 ```
-[1]: https://github.com/ramimK0bir/Face-swap-from-video/blob/main/README.md "Face-swap-from-video/README.md at main · ramimK0bir/Face-swap-from-video · GitHub"
-
-
-
-
 
 
         
@@ -174,4 +169,3 @@ This project provides a tool for swapping faces within video content using machi
 ## Disclaimer
 
 The developer of this project **does not** take responsibility for any misuse of the tool, including, but not limited to, the creation of misleading, harmful, or illegal content. Users of this project are solely responsible for compliance with all applicable laws and regulations.
-```
