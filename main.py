@@ -231,7 +231,7 @@ class videoEditor :
         self.os.remove('internalOutput.mp4')
         self.cleanup("images/")
         print(f"\n\noutput video saved as {self.os.path.abspath(outputPath)}")
-
+        write_log('exit')
 editor=videoEditor()
 
 
