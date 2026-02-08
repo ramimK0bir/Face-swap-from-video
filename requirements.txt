@@ -1,6 +1,5 @@
 # Compatible Python versions: >=3.8, <=3.11
 insightface
-scikit-image==0.25.2
 onnxruntime
 ffmpeg-python
 imageio-ffmpeg
