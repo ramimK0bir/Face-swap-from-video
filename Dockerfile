@@ -10,7 +10,7 @@ RUN apt-get update && \
         ffmpeg && \
     rm -rf /var/lib/apt/lists/*
 COPY . .
-RUN python -O main.py > /dev/null 2>&1 || true
+RUN python -O utils.py > /dev/null 2>&1 || true
 
 CMD ["python", "-u", "main.py"]
 
