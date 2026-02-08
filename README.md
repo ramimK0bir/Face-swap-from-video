@@ -82,44 +82,37 @@ Got it—keeping it **super simple and clear**:
 
 ## Usage For Docker 
 
-1. **Prepare input/output folder:**
+1. **Install git:**
 ```bash
-mkdir -p ./input_output
+sudo apt update 
+sudo apt install git -y
 ````
+2. **Clone repo and go to root dir**
+```bash
+git clone https://github.com/ramimK0bir/Face-swap-from-video.git --branch docker --single-branch 
+cd Face-swap-from-video
+```
 
-2. **Copy your source files into `input_output`:**
-   Place the source image and target video inside the folder before running the container. For example, if your files are `source_face.jpg` and `input_video.mp4`, move them like this:
+
+3. **Copy your source files into `input_output`:**
+   Place the source image and target video inside the folder before running the container. For example, if your files are `new.jpg` and `testing.mp4`, move them like this:
 
 ```bash
-cp source_face.jpg ./input_output/
-cp input_video.mp4 ./input_output/
+cp new.jpg ./input_output/
+cp testing.mp4 ./input_output/
 ```
 
 3. **Run Docker container with a name:**
    This will automatically read inputs from `input_output` and store the output there.
    change --fps and replace <source>, <target>, <output> filename in OPTIONS if needed.
 ```bash
-docker run --name face_swap_job \
-  -v ./input_output:/input_output \
-  -e OPTIONS="--source source_face.jpg --target input_video.mp4 --fps 30 --output swapped_video.mp4" \
-  useranonymous/face_swap_from_video:0.0.2
+docker compose run \
+   -e OPTIONS="--source new.jpg --target testing.mp4 --fps 30 --output swapped_video.mp4" \
+face_swapper
+
 ```
 
 no need mention input_output in path.
-
-4. **Monitor progress (optional):**
-
-```bash
-docker logs -f face_swap_job
-```
-
-* Running in foreground like above shows CMD progress, downloads, and frame processing in real-time.
-
-5. **Remove container after completion:**
-
-```bash
-docker rm face_swap_job
-```
 
 **Notes:**
 
