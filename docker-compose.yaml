@@ -1,0 +1,10 @@
+services:
+  face_swapper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+     - OPTIONS=--source new.jpg --target testing.mp4 --fps 30 --output swapped_video.mp4
+    volumes:
+     - ./input_output:/input_output/
+    
