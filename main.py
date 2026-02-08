@@ -1,7 +1,7 @@
 import os
 import shlex
 import argparse
-import faceSwap
+from module import faceSwap
 
 def main():
     # Grab options from the environment variable "OPTIONS"
