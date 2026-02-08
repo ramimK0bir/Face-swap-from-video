@@ -47,7 +47,7 @@ class videoEditor :
         self.cv2.imwrite(outputImage, swapped_img)
         if (self.numberOfImagesSwaped < int(outputImage.split('/')[-1][0:9]) ):
             self.numberOfImagesSwaped =int(outputImage.split('/')[-1][0:9])
-            print(f"{  int((self.numberOfImagesSwaped/self.numberOfImages)*100)} % done ... t{self.numberOfImages} d{self.numberOfImagesSwaped}" ,end="")
+            print(f"\r{  int((self.numberOfImagesSwaped/self.numberOfImages)*100)} % done ... t{self.numberOfImages} d{self.numberOfImagesSwaped}" ,end="")
   
     def processImage(self,file, sourcePath , face):
         sourcePath=sourcePath.replace('/','')
@@ -198,6 +198,7 @@ class videoEditor :
         print(f"\n\noutput video saved as {self.os.path.abspath(outputPath)}")
 
 editor=videoEditor()
+
 
 
 
