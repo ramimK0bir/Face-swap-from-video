@@ -1,24 +1,24 @@
-from module import faceSwap
-import argparse
 import os
 import shlex
+import argparse
+import faceSwap
 
 def main():
-    # Read arguments from environment variable
-    import os as os_env
-    env_options = os_env.getenv("OPTIONS", "")
-    args_list = shlex.split(env_options)  # safely split like shell arguments
+    # Grab options from the environment variable "OPTIONS"
+    options_str = os.environ.get("OPTIONS", "")
+    # Use shlex.split to safely split the string into a list (handles quotes properly)
+    args_list = shlex.split(options_str) if options_str else []
 
-    parser = argparse.ArgumentParser(description="DeepFake Face Swapper")
-    
-    parser.add_argument('--source', type=str, required=True, help='Path to the source image (face to swap in)')
-    parser.add_argument('--target', type=str, required=True, help='Path to the target video (face to be replaced)')
-    parser.add_argument('--fps', type=int, default=30, help='Frames per second for output video')
-    parser.add_argument('--output', type=str, default='output.mp4', help='Path to save the output video (default: output.mp4)')
-    
-    args = parser.parse_args(args_list)  # parse from env variable
+    parser = argparse.ArgumentParser(description="Face Swap from Image to Video")
+    parser.add_argument("--source", required=True, help="Path to the source image")
+    parser.add_argument("--target", required=True, help="Path to the target video")
+    parser.add_argument("--output", required=True, help="Path to the output video")
+    parser.add_argument("--fps", type=int, default=30, help="Frames per second for output video")
 
-    # Prepend /input_output/ to source, target, output paths
+    # Parse arguments from env OPTIONS
+    args = parser.parse_args(args_list)
+
+    # Prepend /input_output/ to paths
     args.source = os.path.join("/input_output", args.source)
     args.target = os.path.join("/input_output", args.target)
     args.output = os.path.join("/input_output", args.output)
@@ -32,17 +32,19 @@ def main():
         print(f"Error: The target video path '{args.target}' is invalid or the file does not exist.")
         return
     
-    # Validate the output directory or file path
+    # Validate output directory
     output_dir = os.path.dirname(args.output)
     if output_dir and not os.path.exists(output_dir):
         print(f"Error: The output directory '{output_dir}' does not exist.")
         return
-    
+
+    # Print paths and settings
     print(f"Source Image Path: {args.source}")
     print(f"Target Video Path: {args.target}")
     print(f"FPS: {args.fps}")
     print(f"Output Video Path: {args.output}")
-    
+
+    # Run face swap
     try:
         editor = faceSwap.editor
         editor.swapFaceFromVideo(args.source, args.target, args.output, args.fps)
@@ -50,7 +52,8 @@ def main():
     except Exception as e:
         print(f"Error: An issue occurred during face swapping - {str(e)}")
         if "integer modulo b" in str(e):
-            print("Try again after reducing --fps. If --fps not used, try --fps equal to source video fps.")
+            print("Tip: Try reducing --fps. If --fps is not used, try setting --fps equal to the source video's fps.")
 
+# Standard Python entry point
 if __name__ == "__main__":
     main()
