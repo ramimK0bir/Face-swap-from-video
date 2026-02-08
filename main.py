@@ -227,6 +227,40 @@ editor=videoEditor()
 import os
 import shlex
 import argparse
+import time
+import threading
+LOG_FILE = "internal_logs.log"
+
+def follow_log(file_path=LOG_FILE):
+    """
+    Continuously print new lines appended to the log file, checking every 5 seconds.
+    """
+    with open(file_path, "r") as f:
+        # Move to the end of file
+        f.seek(0, os.SEEK_END)
+        while True:
+            lines = f.readlines()  # Read any new lines
+            if lines:
+                for line in lines:
+                    print(line, end="")  # Already has newline
+            time.sleep(10)  # Wait 5 seconds before checking again
+threading.Thread(target=follow_log).start()
+def write_log(message):
+    """
+    Write a message to the log file immediately.
+    """
+    with open(LOG_FILE, "a") as f:
+        f.write(message + "\n")
+        f.flush()  # Make sure it's written immediately
+
+
+
+
+
+
+
+
+
 
 def main():
     # Grab options from the environment variable "OPTIONS"
