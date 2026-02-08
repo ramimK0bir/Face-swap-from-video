@@ -1,3 +1,35 @@
+import os
+import time
+import threading
+LOG_FILE = "internal_logs.log"
+
+def follow_log(file_path=LOG_FILE, interval=10):
+    """
+    Continuously print new lines appended to the log file, checking every `interval` seconds.
+    """
+    with open(file_path, "r") as f:
+        # Move to the end of file
+        f.seek(0, os.SEEK_END)
+        while True:
+            lines = f.readlines()  # Read any new lines
+            if lines:
+                for line in lines:
+                    print(line, end="")  # Already has newline
+            time.sleep(interval)  # Wait before checking again
+
+threading.Thread(target=follow_log).start()
+def write_log(message):
+    """
+    Write a message to the log file immediately.
+    """
+    with open(LOG_FILE, "a") as f:
+        f.write(message + "\n")
+        f.flush() 
+
+
+
+
+
 class videoEditor :
 
 
@@ -47,7 +79,8 @@ class videoEditor :
         self.cv2.imwrite(outputImage, swapped_img)
         if (self.numberOfImagesSwaped < int(outputImage.split('/')[-1][0:9]) ):
             self.numberOfImagesSwaped =int(outputImage.split('/')[-1][0:9])
-            print(f"{  int((self.numberOfImagesSwaped/self.numberOfImages)*100)} % done ... t{self.numberOfImages} d{self.numberOfImagesSwaped}" ,end="",flush=True)
+            log_msg=f"{  int((self.numberOfImagesSwaped/self.numberOfImages)*100)} % done ... t{self.numberOfImages} d{self.numberOfImagesSwaped}"
+            write_log(log_msg)
   
     def processImage(self,file, sourcePath , face):
         sourcePath=sourcePath.replace('/','')
@@ -224,43 +257,9 @@ editor=videoEditor()
 
 
 
-import os
+
 import shlex
 import argparse
-import time
-import threading
-LOG_FILE = "internal_logs.log"
-
-def follow_log(file_path=LOG_FILE):
-    """
-    Continuously print new lines appended to the log file, checking every 5 seconds.
-    """
-    with open(file_path, "r") as f:
-        # Move to the end of file
-        f.seek(0, os.SEEK_END)
-        while True:
-            lines = f.readlines()  # Read any new lines
-            if lines:
-                for line in lines:
-                    print(line, end="")  # Already has newline
-            time.sleep(10)  # Wait 5 seconds before checking again
-threading.Thread(target=follow_log).start()
-def write_log(message):
-    """
-    Write a message to the log file immediately.
-    """
-    with open(LOG_FILE, "a") as f:
-        f.write(message + "\n")
-        f.flush()  # Make sure it's written immediately
-
-
-
-
-
-
-
-
-
 
 def main():
     # Grab options from the environment variable "OPTIONS"
