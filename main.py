@@ -316,3 +316,4 @@ def main():
 # Standard Python entry point
 if __name__ == "__main__":
     main()
+    write_log('exit')
