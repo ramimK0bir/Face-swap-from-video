@@ -14,6 +14,8 @@ def follow_log(file_path=LOG_FILE, interval=10):
             lines = f.readlines()  # Read any new lines
             if lines:
                 for line in lines:
+                    if line.strip()=="exit" :
+                        return 
                     print(line, end="")  # Already has newline
             time.sleep(interval)  # Wait before checking again
 
