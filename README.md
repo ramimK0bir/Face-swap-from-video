@@ -85,7 +85,7 @@ Got it—keeping it **super simple and clear**:
 1. **Install git:**
 ```bash
 sudo apt update 
-sudo apt install git -y
+sudo apt install git docker.io -y
 ````
 2. **Clone repo and go to root dir**
 ```bash
