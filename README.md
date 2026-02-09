@@ -1,6 +1,6 @@
 # DeepFake Face Swapper 
 
-### This project is a deepfake video face swapping tool that allows users to swap faces in video clips using deep learning techniques. It leverages computer vision and neural networks to create realistic swapped faces in videos.
+### This project is a deepfake video face swapping tool that allows users to swap faces in video clips using deep Learning techniques. It leverages computer vision and neural networks to create realistic swapped faces in videos.
 
 Got it—keeping it **super simple and clear**:
 
@@ -36,7 +36,7 @@ Got it—keeping it **super simple and clear**:
     !pip install -r requirements.txt
 
 ### Additional settings for CUDA execution.
-#### Make sure you're running it with CUDA GPU.
+#### Ensure you’re running it on a machine with a CUDA-enabled GPU.
     !pip uninstall onnxruntime -y
     !pip install onnxruntime-gpu
   ### For Regular Linux System
@@ -46,7 +46,7 @@ Got it—keeping it **super simple and clear**:
     cd Face-swap-from-video
     pip install -r requirements.txt
 ### Additional settings for CUDA execution.
-#### Make sure you're running it with CUDA GPU.
+#### Ensure you’re running it on a machine with a CUDA-enabled GPU.
     pip uninstall onnxruntime -y
     pip install onnxruntime-gpu
 
@@ -100,7 +100,7 @@ cd Face-swap-from-video
 ```bash
 cp new.jpg ./input_output/
 cp testing.mp4 ./input_output/
-# tehre's real new.jpg and testing.mp4 inside input_output for testing 
+# there's real new.jpg and testing.mp4 inside input_output for testing 
 # please delete them or use different name
 ```
 
