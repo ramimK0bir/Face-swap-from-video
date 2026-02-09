@@ -272,7 +272,7 @@ def main():
     parser = argparse.ArgumentParser(description="Face Swap from Image to Video")
     parser.add_argument("--source", required=True, help="Path to the source image")
     parser.add_argument("--target", required=True, help="Path to the target video")
-    parser.add_argument("--output", required=True, help="Path to the output video")
+    parser.add_argument("--output", default="output.mp4", help="Path to the output video")
     parser.add_argument("--fps", type=int, default=30, help="Frames per second for output video")
 
     # Parse arguments from env OPTIONS
@@ -303,6 +303,7 @@ def main():
     print(f"Target Video Path: {args.target}")
     print(f"FPS: {args.fps}")
     print(f"Output Video Path: {args.output}")
+
 
     # Run face swap
     try:
