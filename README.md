@@ -35,8 +35,8 @@ Got it—keeping it **super simple and clear**:
     %cd Face-swap-from-video
     !pip install -r requirements.txt
 
-### Additional settings for cuda execution .
-#### Make sure you're running it with cuda GPU.
+### Additional settings for CUDA execution .
+#### Make sure you're running it with CUDA GPU.
     !pip uninstall onnxruntime -y
     !pip install onnxruntime-gpu
   ### For Regular Linux System
@@ -45,8 +45,8 @@ Got it—keeping it **super simple and clear**:
     git clone https://github.com/ramimK0bir/Face-swap-from-video.git
     cd Face-swap-from-video
     pip install -r requirements.txt
-### Additional settings for cuda execution .
-#### Make sure you're running it with cuda GPU.
+### Additional settings for CUDA execution .
+#### Make sure you're running it with CUDA GPU.
     pip uninstall onnxruntime -y
     pip install onnxruntime-gpu
 
