@@ -101,7 +101,7 @@ cd Face-swap-from-video
 cp new.jpg ./input_output/
 cp testing.mp4 ./input_output/
 # there's real new.jpg and testing.mp4 inside input_output for testing 
-# please delete them or use different name
+# please delete them or use different names
 ```
 
 3. **Run Docker container with a name:**
