@@ -75,7 +75,7 @@ Got it—keeping it **super simple and clear**:
         
 ## 👋 Instructions 
 
-      --fps must be smaller or equal to target video fps 
+      --fps must be less than or equal to the target video’s FPS.
       Use Colab.
 [Google Colab](https://colab.research.google.com)
 
