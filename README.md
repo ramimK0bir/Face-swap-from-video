@@ -108,13 +108,17 @@ cp testing.mp4 ./input_output/
    This will automatically read inputs from `input_output` and store the output there.
    change --fps and replace <source>, <target>, <output> filename in OPTIONS if needed.
 ```bash
-docker compose run \
+docker compose run --name face_swap1 \
    -e OPTIONS="--source new.jpg --target testing.mp4 --fps 30 --output swapped_video.mp4" \
 face_swapper
 
 ```
 
 no need mention input_output in path.
+4. **Remove container after execution**
+```bash
+docker rm face_swap1
+```
 
 **Notes:**
 
