@@ -76,7 +76,7 @@ Got it—keeping it **super simple and clear**:
 ## 👋 Instructions 
 
       --fps must be smaller or equal to target video fps 
-      use colab.
+      Use Colab.
 [Google Colab](https://colab.research.google.com)
 
 
