@@ -29,7 +29,7 @@ Got it—keeping it **super simple and clear**:
 
 ## 📦 Installation
 
-  ### For [google Colab](https://colab.research.google.com) .
+  ### For [Google Colab](https://colab.research.google.com) .
   #### Ensure you're running this in a Google Colab environment for optimal performance.
     !git clone https://github.com/ramimK0bir/Face-swap-from-video.git
     %cd Face-swap-from-video
@@ -52,7 +52,7 @@ Got it—keeping it **super simple and clear**:
 
 ## 🧪 Usage
 
-  ### For [google Colab](https://colab.research.google.com) .
+  ### For [Google Colab](https://colab.research.google.com) .
   
     !python main.py --source testing/new.jpg --target testing/testing.mp4  --output output.mp4 --fps 30
     
@@ -77,7 +77,7 @@ Got it—keeping it **super simple and clear**:
 
       --fps must be smaller or equal to target video fps 
       use colab.
-[google Colab](https://colab.research.google.com)
+[Google Colab](https://colab.research.google.com)
 
 
 ## Usage For Docker 
