@@ -230,7 +230,7 @@ class videoEditor :
         self.addAudioToVideo('internalOutput.mp4' , videoPath , outputPath)
         self.os.remove('internalOutput.mp4')
         self.cleanup("images/")
-        print(f"\n\noutput video saved as {self.os.path.abspath(outputPath)}")
+        print(f"\n\noutput video saved as .{self.os.path.abspath(outputPath)}")
         write_log('exit')
 editor=videoEditor()
 
@@ -299,10 +299,10 @@ def main():
         return
 
     # Print paths and settings
-    print(f"Source Image Path: {args.source}")
-    print(f"Target Video Path: {args.target}")
+    print(f"Source Image Path: .{args.source}")
+    print(f"Target Video Path: .{args.target}")
     print(f"FPS: {args.fps}")
-    print(f"Output Video Path: {args.output}")
+    print(f"Output Video Path: .{args.output}")
 
 
     # Run face swap
