@@ -29,13 +29,13 @@ Got it—keeping it **super simple and clear**:
 
 ## 📦 Installation
 
-  ### For [Google Colab](https://colab.research.google.com) .
+  ### For [Google Colab](https://colab.research.google.com).
   #### Ensure you're running this in a Google Colab environment for optimal performance.
     !git clone https://github.com/ramimK0bir/Face-swap-from-video.git
     %cd Face-swap-from-video
     !pip install -r requirements.txt
 
-### Additional settings for CUDA execution .
+### Additional settings for CUDA execution.
 #### Make sure you're running it with CUDA GPU.
     !pip uninstall onnxruntime -y
     !pip install onnxruntime-gpu
@@ -45,14 +45,14 @@ Got it—keeping it **super simple and clear**:
     git clone https://github.com/ramimK0bir/Face-swap-from-video.git
     cd Face-swap-from-video
     pip install -r requirements.txt
-### Additional settings for CUDA execution .
+### Additional settings for CUDA execution.
 #### Make sure you're running it with CUDA GPU.
     pip uninstall onnxruntime -y
     pip install onnxruntime-gpu
 
 ## 🧪 Usage
 
-  ### For [Google Colab](https://colab.research.google.com) .
+  ### For [Google Colab](https://colab.research.google.com).
   
     !python main.py --source testing/new.jpg --target testing/testing.mp4  --output output.mp4 --fps 30
     
