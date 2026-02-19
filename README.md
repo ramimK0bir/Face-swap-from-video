@@ -52,7 +52,7 @@ Got it—keeping it **super simple and clear**:
 
 ## 🧪 Usage
 
-  ### For [Google Colab](https://colab.research.google.com).
+  ### For [Google Colab](https://colab.research.google.com/github/ramimK0bir/Face-swap-from-video/blob/main/Face-swap-from-video.ipynb).
   
     !python main.py --source testing/new.jpg --target testing/testing.mp4  --output output.mp4 --fps 30
     
