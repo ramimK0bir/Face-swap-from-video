@@ -29,7 +29,7 @@ Got it—keeping it **super simple and clear**:
 
 ## 📦 Installation
 
-  ### For [Google Colab](https://colab.research.google.com).
+  ### For [Google Colab](https://colab.research.google.com/github/ramimK0bir/Face-swap-from-video/blob/main/Face-swap-from-video.ipynb).
   #### Ensure you're running this in a Google Colab environment for optimal performance.
     !git clone https://github.com/ramimK0bir/Face-swap-from-video.git
     %cd Face-swap-from-video
