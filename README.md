@@ -19,6 +19,16 @@ Got it—keeping it **super simple and clear**:
     GPU acceleration (if available)
 
 ## Demo testing
+### input source image
+![test image](https://github.com/user-attachments/assets/a2a4cace-59e4-40c0-8634-5c0d3cfdfe50)
+### input target video
+https://github.com/user-attachments/assets/91ce520b-aa05-412e-8119-ff276954b40e
+### output result 
+https://github.com/user-attachments/assets/c0d901f8-4c70-43d0-ad12-bfa6f62b5a68
+### demo tutorial
+https://github.com/user-attachments/assets/94ff976f-8236-4574-84c2-7ac94a3ffa63
+
+
 
 
 
