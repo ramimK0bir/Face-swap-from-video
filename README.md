@@ -137,7 +137,6 @@ docker rm face_swap1
 
 ---
 ## Demo testing 
-![Face Swap Demo](https://github.com/ramimK0bir/Face-swap-from-video/blob/main/testing/test.gif?raw=true)
 
 
 ## Credit 
@@ -146,8 +145,7 @@ docker rm face_swap1
 [Insightface](https://github.com/deepinsight/insightface)
 [FFmpeg](https://github.com/FFmpeg/FFmpeg)
 
-### used content on testing
-Lady Gaga -> image , [testing source video](https://www.youtube.com/@albertatech)
+
 
 
 
