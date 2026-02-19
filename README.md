@@ -54,11 +54,11 @@ Got it—keeping it **super simple and clear**:
 
   ### For [Google Colab](https://colab.research.google.com/github/ramimK0bir/Face-swap-from-video/blob/main/Face-swap-from-video.ipynb).
   
-    !python main.py --source testing/new.jpg --target testing/testing.mp4  --output output.mp4 --fps 30
+    !python main.py --source testing/testing.jpg --target testing/testing.mp4  --output output.mp4 --fps 30
     
   ### For Regular Linux System
   
-    python main.py --source testing/new.jpg --target testing/testing.mp4  --output output.mp4 --fps 30
+    python main.py --source testing/testing.jpg --target testing/testing.mp4  --output output.mp4 --fps 30
     
 ## 🆘 Help
 
@@ -102,12 +102,12 @@ cd Face-swap-from-video
 
 
 3. **Copy your source files into `input_output`:**
-   Place the source image and target video inside the folder before running the container. For example, if your files are `new.jpg` and `testing.mp4`, move them like this:
+   Place the source image and target video inside the folder before running the container. For example, if your files are `testing.jpg` and `testing.mp4`, move them like this:
 
 ```bash
-cp new.jpg ./input_output/
+cp testing.jpg ./input_output/
 cp testing.mp4 ./input_output/
-# there's real new.jpg and testing.mp4 inside input_output for testing 
+# there's real testing.jpg and testing.mp4 inside input_output for testing 
 # please delete them or use different names
 ```
 
@@ -116,7 +116,7 @@ cp testing.mp4 ./input_output/
    change --fps and replace <source>, <target>, <output> filename in OPTIONS if needed.
 ```bash
 docker compose run --name face_swap1 \
-   -e OPTIONS="--source new.jpg --target testing.mp4 --fps 30 --output swapped_video.mp4" \
+   -e OPTIONS="--source testing.jpg --target testing.mp4 --fps 30 --output swapped_video.mp4" \
 face_swapper
 
 ```
