@@ -80,7 +80,11 @@ When running main.py, you can pass the following arguments to control how the fa
 
       --fps must be less than or equal to the target video’s FPS.
       Use Colab.
-[Google Colab](https://colab.research.google.com)
+Use [Google Colab](https://colab.research.google.com/github/ramimK0bir/Face-swap-from-video/blob/main/Face-swap-from-video.ipynb) for a better coding experience:  
+- Faster execution with free GPU/TPU resources  
+- Easy access to Python and machine learning libraries  
+- Seamless cloud-based workflow with no local setup required  
+- Simple sharing and collaboration via links  
 
 
 ## Usage For Docker 
