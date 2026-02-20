@@ -18,6 +18,20 @@ Got it—keeping it **super simple and clear**:
     Easy-to-use interface or script-based workflow
     GPU acceleration (if available)
 
+## Demo testing
+### input source image
+![test image](https://github.com/user-attachments/assets/a2a4cace-59e4-40c0-8634-5c0d3cfdfe50)
+### input target video
+https://github.com/user-attachments/assets/91ce520b-aa05-412e-8119-ff276954b40e
+### output result 
+https://github.com/user-attachments/assets/c0d901f8-4c70-43d0-ad12-bfa6f62b5a68
+### demo tutorial
+https://github.com/user-attachments/assets/94ff976f-8236-4574-84c2-7ac94a3ffa63
+
+
+
+
+
 ## 🧠 Technologies Used
 
     Python 3.8
@@ -29,7 +43,7 @@ Got it—keeping it **super simple and clear**:
 
 ## 📦 Installation
 
-  ### For [Google Colab](https://colab.research.google.com).
+  ### For [Google Colab](https://colab.research.google.com/github/ramimK0bir/Face-swap-from-video/blob/main/Face-swap-from-video.ipynb).
   #### Ensure you're running this in a Google Colab environment for optimal performance.
     !git clone https://github.com/ramimK0bir/Face-swap-from-video.git
     %cd Face-swap-from-video
@@ -52,7 +66,7 @@ Got it—keeping it **super simple and clear**:
 
 ## 🧪 Usage
 
-  ### For [Google Colab](https://colab.research.google.com).
+  ### For [Google Colab](https://colab.research.google.com/github/ramimK0bir/Face-swap-from-video/blob/main/Face-swap-from-video.ipynb).
   
     !python main.py --source testing/testing.jpg --target testing/testing.mp4  --output output.mp4 --fps 30
     
@@ -64,20 +78,27 @@ Got it—keeping it **super simple and clear**:
 
 ### 🛠️ Command-Line Arguments
 
-        When running main.py, you can pass the following arguments to control how the face swapper behaves:
+When running main.py, you can pass the following arguments to control how the face swapper behaves:
 
-        Argument	Type	Required	Default	  Description
-        --source	str	✅ Yes    	—	  Path to the source image file. This image contains the face to be swapped.
-        --target	str	✅ Yes   	—	  Path to the target video file where the face will be replaced.
-        --fps	    int	❌ No	        30        Sets the frames per second for the output video. Useful to match original FPS.
-        --output	str	❌ No	     output.mp4	  Path to save the output video.
+|Argument  |  Type  |  Required  |  Default  |  Description|
+|----------|--------|------------|-----------|-------------|
+|--source |    str	|    ✅ Yes    |—|	  Path to the source image file. This image contains the face to be swapped.|
+|--target	|str	|✅ Yes   	|—|Path to the target video file where the face will be replaced.|
+|--fps	    |int	|❌ No	      |30|   Sets the frames per second for the output video. Useful to match original FPS.|
+|--output	|str	|❌ No	     |output.mp4|	  Path to save the output video.|
+
+
 
         
 ## 👋 Instructions 
 
       --fps must be less than or equal to the target video’s FPS.
       Use Colab.
-[Google Colab](https://colab.research.google.com)
+## Use [Google Colab](https://colab.research.google.com/github/ramimK0bir/Face-swap-from-video/blob/main/Face-swap-from-video.ipynb) for a better coding experience:  
+- Faster execution with free GPU/TPU resources  
+- Easy access to Python and machine learning libraries  
+- Seamless cloud-based workflow with no local setup required  
+- Simple sharing and collaboration via links  
 
 
 ## Usage For Docker 
@@ -129,9 +150,6 @@ docker rm face_swap1
 
 
 ---
-## Demo testing 
-![Face Swap Demo](https://github.com/ramimK0bir/Face-swap-from-video/blob/main/testing/test.gif?raw=true)
-
 
 ## Credit 
 
@@ -139,10 +157,10 @@ docker rm face_swap1
 [Insightface](https://github.com/deepinsight/insightface)
 [FFmpeg](https://github.com/FFmpeg/FFmpeg)
 
-### used content on testing
-Lady Gaga -> image , [testing source video](https://www.youtube.com/@albertatech)
-
-
+### used content for demo
+- source image -> https://www.pexels.com/photo/woman-taking-selfie-458766
+- target video -> https://www.pexels.com/video/woman-looking-at-camera-7496275/
+- music as demo video background -> https://pixabay.com/music/beats-vlogs-background-music-340846/
 
 # Face Swap from Video
 
