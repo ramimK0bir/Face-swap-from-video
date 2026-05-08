@@ -6,6 +6,7 @@ class FaceNotFoundError(Exception):
 
 class videoEditor:
     def __init__(self):
+        import uuid
         import urllib
         from tqdm import tqdm
         import os
@@ -14,6 +15,7 @@ class videoEditor:
         import insightface
         from insightface.app import FaceAnalysis
         self.os = os
+        self.uuid=uuid
         self.urllib = urllib
         self.tqdm = tqdm
         self.subprocess = subprocess
@@ -112,10 +114,10 @@ class videoEditor:
         out.release()
 
     def swapFaceFromVideo(self, faceImage, videoPath, outputPath, videoFps):
-
+        self.internalOutput = f"{uuid.uuid4()}.mp4"
         self.swap_all_faces_from_video(faceImage, videoPath, 'internalOutput.mp4', videoFps)
-        self.addAudioToVideo(f'internalOutput.mp4', videoPath, outputPath)
-        self.os.remove(f'internalOutput.mp4')
+        self.addAudioToVideo(self.internalOutput, videoPath, outputPath)
+        self.os.remove(self.internalOutput)
         print(f"\n\noutput video saved as {self.os.path.abspath(outputPath)}")
 
 
