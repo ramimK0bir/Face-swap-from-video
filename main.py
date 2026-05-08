@@ -36,6 +36,9 @@ def main():
         editor = faceSwap.editor
         editor.swapFaceFromVideo(args.source, args.target, args.output, args.fps)
         print("Face swapping completed successfully!")
+    except  faceSwap.FaceNotFoundError: 
+        print(f'Face not found please try with a different source image.')
+        
     except Exception as e:
         print(f"Error: An issue occurred during face swapping - {str(e)}")
         if "integer modulo b" in str(e):
